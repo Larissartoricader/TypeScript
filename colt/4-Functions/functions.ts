@@ -4,11 +4,9 @@ function square(num1: number) {
 
 square(2);
 
-function greeting(person: string) {
+function greeting(person: string): string {
   return `Hello ${person}`;
 }
-
-greeting("Larissa");
 
 const doSomething = (person: string, age: number, isFunny: boolean) => {};
 
