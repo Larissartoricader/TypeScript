@@ -1,5 +1,17 @@
 //If you want to declare the type of values from an object inside a function as parameter, you can do it. But if you have nested object, it will become really complicate insert {} inisde {}. That is the point where alias is really helpful as nested objects.
 
+// That is how TS insider a function looks like.
+
+function printBestSound(song: {
+  artist: string;
+  songName: string;
+  numStream: number;
+  credits: { producer: string; dj: string; compositor: string };
+  position: number;
+}) {
+  console.log(song.artist);
+}
+
 const bestSong = {
   artist: "Anitta",
   songName: "Bang Bang",
@@ -11,18 +23,6 @@ const bestSong = {
   },
   position: 2,
 };
-
-// That is how TS insider a function looks like.
-
-function printBestSound(bestSong: {
-  artist: string;
-  songName: string;
-  numStream: number;
-  credits: { producer: string; dj: string; compositor: string };
-  position: number;
-}) {
-  console.log(bestSong);
-}
 
 printBestSound(bestSong);
 
