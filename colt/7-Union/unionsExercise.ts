@@ -66,7 +66,7 @@ const colors: (RGB | HSL)[] = [];
 // ******************* PART 6 *******************
 // **********************************************
 // Write a function called greet that accepts a single string OR an array of strings
-// It should print "Hello, <name>" for that single person OR greet each person in the array with the same format
+// It should print "Hello, <name>" for that single person OR greet each person in the array with the same format.
 
 // function greet(name: string | string[]): void {
 //   if (typeof name === "string") {
