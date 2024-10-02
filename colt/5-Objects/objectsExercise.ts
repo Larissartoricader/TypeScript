@@ -1,4 +1,16 @@
 // Write the Movie type alias to make the following two variables properly typed
+
+type Movie = {
+  readonly title: string;
+  originalTitle?: string;
+  director: string;
+  releaseYear: number;
+  boxOffice: {
+    budget: number;
+    grossUS: number;
+    grossWorldwide: number;
+  };
+};
 // Make sure that "originalTitle" is optional and "title" is readonly
 const dune: Movie = {
   title: "Dune",
@@ -28,3 +40,10 @@ const cats: Movie = {
 
 // For example...
 // getProfit(cats) => -21166652
+
+function getProfit(movie: Movie) {
+  return movie.boxOffice.grossWorldwide - movie.boxOffice.budget;
+}
+
+console.log(getProfit(cats));
+console.log(getProfit(dune));
