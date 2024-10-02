@@ -11,3 +11,5 @@ function calculateTax(price: number | string, tax: number) {
 
 console.log(calculateTax(19, 0.2));
 console.log(calculateTax("$4", 2));
+
+// typeof checks which type the value is and we can decide what to do
