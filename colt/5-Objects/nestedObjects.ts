@@ -52,3 +52,36 @@ function calculateSong(newSong: song) {
 }
 
 calculateSong(bestSong);
+
+// There is possibility to declare a spefic type and define if an value is required or optional. If you insert an ? after the name of the variable, it is an optional one.
+
+type Point = {
+  variableX: number;
+  variableY: number;
+  variableZ?: number;
+};
+
+// I can or can not insert the VariableZ when I declare my variable of the my own created type Point.
+
+const myPoint: Point = { variableX: 1, variableY: 2 };
+
+// I can also define if an key-Property is only readble.
+
+type User = {
+  readonly id: number;
+  username: string;
+  age: number;
+  adress: string;
+};
+
+const myUser: User = {
+  id: 12345,
+  username: "Luana",
+  age: 54,
+  adress: "City Street, 234",
+};
+
+console.log(myUser.id);
+
+// I can no reassign the ID because onde I declare it, I can not change it.
+//myUser.id = 2837;

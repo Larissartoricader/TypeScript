@@ -22,8 +22,19 @@ function showMeTheSong(songName) {
 }
 showMeTheSong(bestSong);
 function calculateSong(newSong) {
-    var valueOfSong = newSong.numStream / 0.333;
+    var valueOfSong = newSong.numStream * 0.333;
     console.log(valueOfSong);
     return valueOfSong;
 }
 calculateSong(bestSong);
+// I can or can not insert the VariableZ when I declare my variable of the my own created type Point.
+var myPoint = { variableX: 1, variableY: 2 };
+var myUser = {
+    id: 12345,
+    username: "Luana",
+    age: 54,
+    adress: "City Street, 234",
+};
+console.log(myUser.id);
+// I can no reassign the ID because onde I declare it, I can not change it.
+//myUser.id = 2837;
