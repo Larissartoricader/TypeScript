@@ -9,3 +9,19 @@ console.log(salary);
 var pets = ["peixe", "hailing", "bob"];
 pets.push("tartatura");
 console.log(pets);
+// I can also define the types of values inside an array by using:
+var answer = [];
+answer.push(true);
+answer.push(true);
+answer.push(false);
+answer.push(true);
+answer.push(true);
+console.log(answer);
+//first is the array empty, but already pre defined what kind of values should be inside. Because we defined Point as a type
+var coords = [];
+coords.push({ variableX: 123, variableY: 2837 });
+console.log(coords);
+coords.push({ variableX: 198, variableY: 7, variableZ: 342 });
+console.log(coords);
+coords[0] = { variableX: 1, variableY: 2, variableZ: 3 };
+console.log(coords);

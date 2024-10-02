@@ -15,3 +15,38 @@ const pets: string[] = ["peixe", "hailing", "bob"];
 
 pets.push("tartatura");
 console.log(pets);
+
+// I can also define the types of values inside an array by using:
+
+const answer: Array<boolean> = [];
+
+answer.push(true);
+answer.push(true);
+answer.push(false);
+answer.push(true);
+answer.push(true);
+console.log(answer);
+
+// I can insert my own created type of object to be the type of values inside an array:
+
+type Point = {
+  variableX: number;
+  variableY: number;
+  variableZ?: number;
+};
+//first is the array empty, but already pre defined what kind of values should be inside. Because we defined Point as a type
+const coords: Point[] = [];
+coords.push({ variableX: 123, variableY: 2837 });
+console.log(coords);
+coords.push({ variableX: 198, variableY: 7, variableZ: 342 });
+console.log(coords);
+coords[0] = { variableX: 1, variableY: 2, variableZ: 3 };
+console.log(coords);
+
+//Two Dimensional-Arrays: If I want to define a type of variable as an array inside another array and also the type of values, I should do:
+
+const board: string[][] = [["dog", "cat", "fish"]];
+
+// Three Dimensional-Arrays: An array insede another array, inside another array:
+
+const inceptionOfArrays: number[][][] = [[[1], [2], [3], [4]]];
