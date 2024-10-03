@@ -73,4 +73,4 @@ const redShoes: Product = {
   },
 };
 
-redShoes.applyDiscount(0.2);
+console.log(redShoes.applyDiscount(0.2));
