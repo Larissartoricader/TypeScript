@@ -101,3 +101,5 @@ const paul: Employee = {
   departament: "Port",
   admissionYear: 2002,
 };
+
+// Now my object fullfills all requirements of my interface.
