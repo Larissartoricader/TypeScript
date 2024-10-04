@@ -31,7 +31,7 @@ const userY: myUser = {
   adress: "A street, 2",
 };
 
-//like in type it is possible also to use readonly or ? as optional like in type. BUT in Interfaces you can also create a methode for you object type
+//like in type it is possible also to use readonly or ? as optional like in type. You can create a METHOD as an arrow function and use it inside the interface in an object. In the interface I can specify what kind of return this method should return.
 
 interface Pet {
   readonly id: number;
@@ -55,7 +55,7 @@ const lulu: Pet = {
   },
 };
 
-// You can create a methode as arrow function and use it inside the interface in an object:
+// You can also add a parameter to your arrow function and also define what kind type this parameter should be:
 
 interface Product {
   name: string;
@@ -74,3 +74,30 @@ const redShoes: Product = {
 };
 
 console.log(redShoes.applyDiscount(0.2));
+
+// One of the most value function of interface is the possibility to reopen it and edit it, withou rewritten it. Once you define your interface and the requirements of your object, it is possible to reopen and insert more requirement.
+
+interface Employee {
+  name: string;
+  age: number;
+  departament: string;
+}
+
+// const paul: Employee = {
+//   name: "Paul",
+//   age: 34,
+//   departament: "Port",
+// };
+
+// As soon a insert a new key-property as requirment to this object, TS shows my the my previous define Object is missing one key-property
+
+interface Employee {
+  admissionYear: number;
+}
+
+const paul: Employee = {
+  name: "Paul",
+  age: 34,
+  departament: "Port",
+  admissionYear: 2002,
+};
