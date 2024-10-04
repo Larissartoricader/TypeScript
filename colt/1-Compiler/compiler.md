@@ -68,3 +68,7 @@ This configuration defines which version of JavaScript the TypeScript files will
 By Default it will be ES5.
 
 in target at `tsconfig.ts`, you can change from ES5 for a more updated version of JS, like ES2017.
+
+## Strict
+
+Strict is by default always true and that allows all TS checks and tests.
