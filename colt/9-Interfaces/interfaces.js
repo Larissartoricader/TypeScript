@@ -1,36 +1,44 @@
+"use strict";
 // Interface and Alias Type have similiar functions
 //For Objects I can apply a type or interface as definition of the values in the key-properties.
-var userX = {
+const userX = {
     name: "Larissa",
     age: 36,
     isAdmin: true,
     adress: "A street, 2",
 };
-var userY = {
+const userY = {
     name: "Larissa",
     age: 36,
     isAdmin: true,
     adress: "A street, 2",
 };
-var lulu = {
+const lulu = {
     id: 192,
     name: "lulu",
     age: 12,
     nickname: "lu",
-    sayHi: function () {
+    sayHi: () => {
         return "Hello, Lulu";
     },
-    sayBye: function () {
+    sayBye: () => {
         return "Bye, lulu";
     },
 };
-var redShoes = {
+const redShoes = {
     name: "Mui Mui",
     price: 2334.23,
-    applyDiscount: function (shoesDiscount) {
-        var newPrice = this.price * (1 - shoesDiscount);
+    applyDiscount(shoesDiscount) {
+        const newPrice = this.price * (1 - shoesDiscount);
         this.price = newPrice;
         return this.price;
     },
 };
 console.log(redShoes.applyDiscount(0.2));
+const paul = {
+    name: "Paul",
+    age: 34,
+    departament: "Port",
+    admissionYear: 2002,
+};
+// Now my object fullfills all requirements of my interface.

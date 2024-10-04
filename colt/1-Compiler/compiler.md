@@ -36,11 +36,35 @@ The same for exclude a path:
 ex:
 
 `{
-    "include": ["public/**/*"]
+    "exclude": ["public/**/*"]
 }`
 
 ex:
 
-`"include: ["src]`
+`"exclude: ["src]`
+
+By Default exclude always excludes `node_modules`. So if you configure a new exclude files and you have node_modules, you have to insert it again, otherwise many files from node module will be compiled.
 
 PS: Include & Exclude should be in the root of jsconfig.ts
+
+## outDir - Out Directory
+
+This configuration define, where TS should place the JS-Files after compilation.
+
+By Default TS will place the JS-files in the same directory, where the TS-files are.
+
+Normally there is a separation of files. All TS-Files will be placed into one folder and the JS-files will be placed in another one. There is a best pratice, of name a folder as dist and place all TS-Files inside.
+
+Find in `tsconfig.json` the `"outDir"` and introce the directory, where all JS-Files should be placed.
+
+Ex:
+
+`"outDir": "./dist"`
+
+## Target
+
+This configuration defines which version of JavaScript the TypeScript files will be compiled into.
+
+By Default it will be ES5.
+
+in target at `tsconfig.ts`, you can change from ES5 for a more updated version of JS, like ES2017.

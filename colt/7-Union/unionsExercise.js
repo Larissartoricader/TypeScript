@@ -1,22 +1,23 @@
+"use strict";
 // **********************************************
 // ******************* PART 1 *******************
 // **********************************************
 // Create a variable called highScore that can be a number OR a boolean
-var highScore = false;
+const highScore = false;
 // **********************************************
 // ******************* PART 2 *******************
 // **********************************************
 // create an array called stuff
 // it can be an array of numbers OR an array of strings
 // it cannot be an array of numbers and strings (mixed together)
-var stuff = ["hello", "hallo"];
+const stuff = ["hello", "hallo"];
 // Create an array called colors that can hold a mixture of RGB and HSL color types
-var colors = [];
+const colors = [];
 // **********************************************
 // ******************* PART 6 *******************
 // **********************************************
 // Write a function called greet that accepts a single string OR an array of strings
-// It should print "Hello, <name>" for that single person OR greet each person in the array with the same format
+// It should print "Hello, <name>" for that single person OR greet each person in the array with the same format.
 // function greet(name: string | string[]): void {
 //   if (typeof name === "string") {
 //     console.log(`Hello, ${name}!`);
@@ -28,15 +29,15 @@ var colors = [];
 // }
 function greet(name) {
     if (Array.isArray(name)) {
-        name.map(function (eachName) {
-            console.log("Hello ".concat(eachName));
+        name.map((eachName) => {
+            console.log(`Hello ${eachName}`);
         });
     }
     else {
-        console.log("Only you here? Hello ".concat(name));
+        console.log(`Only you here? Hello ${name}`);
     }
 }
-var listOfNames = ["Maria", "Larissa", "Anna", "Ana", "Claudia"];
-var onlyOneName = "Luana";
+const listOfNames = ["Maria", "Larissa", "Anna", "Ana", "Claudia"];
+const onlyOneName = "Luana";
 greet(listOfNames);
 greet(onlyOneName);

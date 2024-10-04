@@ -1,3 +1,4 @@
+"use strict";
 // **********************************************
 // ******************* PART 1 *******************
 // **********************************************
@@ -7,21 +8,19 @@
 // twoFer() => "One for you, one for me"
 // twoFer("Elton") => "One for Elton, one for me"
 function twoFer(person) {
-  if (!person) {
-    return "One for you, one for me";
-  } else {
-    return "One for ".concat(person, ", one for me");
-  }
+    if (!person) {
+        return "One for you, one for me";
+    }
+    else {
+        return `One for ${person}, one for me`;
+    }
 }
-console.log(twoFer("Larissa"));
+twoFer("Larissa");
 //solution: Instead of If/else I can declare a default value of person!!!
-function twoFerAgain(person) {
-  if (person === void 0) {
-    person = "you";
-  }
-  return "One for ".concat(person, ", one for me");
+function twoFerAgain(person = "you") {
+    return `One for ${person}, one for me`;
 }
-console.log(twoFerAgain());
+twoFerAgain();
 // **********************************************
 // ******************* PART 2 *******************
 // **********************************************
@@ -35,15 +34,16 @@ console.log(twoFerAgain());
 // - year is a multiple of 400
 // hint - use modulo
 function isLeapYear(year) {
-  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
-console.log(isLeapYear(2024));
+console.log(isLeapYear(2025));
 //Solution: If write this function as anonymous function, the return will give me already true or false, because I specify that it is a boolean function
-var isAReallyLeapYearAgain = function (year) {
-  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+const isAReallyLeapYearAgain = (year) => {
+    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 };
-console.log(isAReallyLeapYearAgain(2024));
+console.log(isAReallyLeapYearAgain(2025));

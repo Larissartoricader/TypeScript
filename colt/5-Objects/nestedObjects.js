@@ -1,9 +1,10 @@
+"use strict";
 //If you want to declare the type of values from an object inside a function as parameter, you can do it. But if you have nested object, it will become really complicate insert {} inisde {}. That is the point where alias is really helpful as nested objects.
 // That is how TS insider a function looks like. Too many information inside a function
 function printBestSound(song) {
     console.log(song.artist);
 }
-var bestSong = {
+const bestSong = {
     artist: "Anitta",
     songName: "Bang Bang",
     numStream: 32453,
@@ -22,14 +23,14 @@ function showMeTheSong(songName) {
 }
 showMeTheSong(bestSong);
 function calculateSong(newSong) {
-    var valueOfSong = newSong.numStream * 0.333;
+    const valueOfSong = newSong.numStream * 0.333;
     console.log(valueOfSong);
     return valueOfSong;
 }
 calculateSong(bestSong);
 // I can or can not insert the VariableZ when I declare my variable of the my own created type Point.
-var myPoint = { variableX: 1, variableY: 2 };
-var myUser = {
+const myPoint = { variableX: 1, variableY: 2 };
+const myUser = {
     id: 12345,
     username: "Luana",
     age: 54,

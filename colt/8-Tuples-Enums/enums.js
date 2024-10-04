@@ -1,3 +1,4 @@
+"use strict";
 //Enums allows to define which kind of answers can be selected. It does not exist in JS, only in TS
 var PossibilitiesOfAnswers;
 (function (PossibilitiesOfAnswers) {
@@ -5,7 +6,7 @@ var PossibilitiesOfAnswers;
     PossibilitiesOfAnswers[PossibilitiesOfAnswers["yes"] = 1] = "yes";
     PossibilitiesOfAnswers[PossibilitiesOfAnswers["maybe"] = 2] = "maybe";
 })(PossibilitiesOfAnswers || (PossibilitiesOfAnswers = {}));
-var myStatusQuo = PossibilitiesOfAnswers.no;
+const myStatusQuo = PossibilitiesOfAnswers.no;
 function isMyAnswerYes(myAnswer) {
     if (myAnswer === PossibilitiesOfAnswers.maybe) {
         console.log("Maybe. It is maybe");
@@ -28,16 +29,17 @@ var OrderStatus;
     OrderStatus[OrderStatus["ACCEPTED"] = 500] = "ACCEPTED";
 })(OrderStatus || (OrderStatus = {}));
 // It is also possible to give strings as values.
+// Enums is a great possibility to avoid condition written by strings. If you define the possibility of answers, you can use your Unem as a type for you values and limited the kind of answers that your variable can have.
 var Commands;
 (function (Commands) {
     Commands["ENTER"] = "Yes";
     Commands["SHIFT"] = "No";
     Commands["DELETE"] = "Maybe";
 })(Commands || (Commands = {}));
-var myFeeling = 1 /* Feelings.Sad */;
-function readFeeling(feeling) {
+const myOwnFeeling = 1 /* Feelings.Sad */;
+function readMyFeeling(feeling) {
     if (feeling !== 0 /* Feelings.Happy */) {
         console.log("Happiness is a choice");
     }
 }
-readFeeling(myFeeling);
+readMyFeeling(myOwnFeeling);
