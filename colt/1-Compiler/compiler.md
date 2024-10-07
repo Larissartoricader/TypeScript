@@ -1,5 +1,9 @@
 # Initialization of TS
 
+`npm install typescript --save-dev`
+
+## Initialization of TS Config
+
 `tsc --init`
 
 ## Watch Mode
